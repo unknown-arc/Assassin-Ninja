@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Why did the student bring a ladder to school?",
+    "options": ["To reach high books", "To clean the roof", "To play", "To climb trees"],
+    "answer": "To reach high books"
+  },
+  {
+    "question": "Why did the computer go to sleep?",
+    "options": ["It was tired", "It had a sleep mode", "Battery finished", "Internet slow"],
+    "answer": "It had a sleep mode"
+  },
+  {
+    "question": "Why did the boy take a pencil to bed?",
+    "options": ["To draw dreams", "To do homework", "To write a story", "To sharpen it"],
+    "answer": "To draw dreams"
+  },
+  {
+    "question": "Why did the banana go to the doctor?",
+    "options": ["It was not feeling well", "It was too yellow", "It was too sweet", "It was hungry"],
+    "answer": "It was not feeling well"
+  },
+  {
+    "question": "Why did the student take a book to the playground?",
+    "options": ["To read", "To play cricket", "To throw it", "To hide it"],
+    "answer": "To read"
+  },
+  {
+    "question": "Why did the teacher wear sunglasses in class?",
+    "options": ["Because the students were too bright", "Because of sun", "Because of fashion", "Because of sleep"],
+    "answer": "Because the students were too bright"
+  },
+  {
+    "question": "Why did the computer bring a charger?",
+    "options": ["To get energy", "To call someone", "To play games", "To watch movies"],
+    "answer": "To get energy"
+  },
+  {
+    "question": "Why did the cat sit near the computer?",
+    "options": ["To watch videos", "To catch the mouse", "To sleep", "To eat food"],
+    "answer": "To catch the mouse"
+  },
+  {
+    "question": "Why did the boy bring a spoon to school?",
+    "options": ["To eat lunch", "To dig soil", "To play cricket", "To draw"],
+    "answer": "To eat lunch"
+  },
+  {
+    "question": "Why did the student smile during the exam?",
+    "options": ["Because he studied well", "Because he slept well", "Because he guessed answers", "Because exam was easy"],
+    "answer": "Because exam was easy"
+  },
+  {
+    "question": "Why did the phone go to school?",
+    "options": ["To become smarter", "To make calls", "To watch videos", "To charge battery"],
+    "answer": "To become smarter"
+  },
+  {
+    "question": "Why did the boy bring an umbrella on a sunny day?",
+    "options": ["To protect from sun", "To look cool", "To play with friends", "To carry books"],
+    "answer": "To protect from sun"
+  },
+  {
+    "question": "Why did the dog sit under the fan?",
+    "options": ["To stay cool", "To bark", "To sleep", "To eat"],
+    "answer": "To stay cool"
+  },
+  {
+    "question": "Why did the student bring extra paper to exam?",
+    "options": ["To write more answers", "To draw pictures", "To fold airplanes", "To share with friends"],
+    "answer": "To write more answers"
+  },
+  {
+    "question": "Why did the boy carry two bags to school?",
+    "options": ["One for books and one for lunch", "For fun", "To show off", "To give friends"],
+    "answer": "One for books and one for lunch"
+  },
+  {
+    "question": "Why did the student clap after solving a math problem?",
+    "options": ["Because he was happy", "Because teacher said so", "Because friends asked", "Because bell rang"],
+    "answer": "Because he was happy"
+  },
+  {
+    "question": "Why did the child bring a pillow to class?",
+    "options": ["To sleep comfortably", "To sit", "To play", "To hide books"],
+    "answer": "To sleep comfortably"
+  },
+  {
+    "question": "Why did the computer get updated?",
+    "options": ["To work better", "To become bigger", "To change color", "To sleep"],
+    "answer": "To work better"
+  },
+  {
+    "question": "Why did the student drink water before exam?",
+    "options": ["To stay fresh", "To play", "To run", "To sleep"],
+    "answer": "To stay fresh"
+  },
+  {
+    "question": "Why did the teacher laugh in class?",
+    "options": ["Because students made a funny answer", "Because of noise", "Because of phone", "Because of bell"],
+    "answer": "Because students made a funny answer"
+  }
+]

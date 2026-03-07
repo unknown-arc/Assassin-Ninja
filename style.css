@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+body {
+    background-color: #050510;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    touch-action: none; 
+}
+
+#game-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 100vh;
+    aspect-ratio: 2 / 1; 
+    
+    background-color: #0a0a1a;
+    box-shadow: 0 0 40px rgba(0, 255, 204, 0.1);
+    overflow: hidden;
+    
+    border: 2px solid #1e293b;
+    border-radius: 8px;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.hud {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 4%;
+    font-size: clamp(12px, 2vw, 18px);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.stat-box {
+    background: rgba(10, 10, 26, 0.8);
+    padding: 1.5% 3%;
+    border-radius: 4px;
+    border: 1px solid #334155;
+}
+
+.text-cyan { color: #00ffcc; text-shadow: 0 0 10px #00ffcc; }
+.danger { color: #ff0055; text-shadow: 0 0 15px #ff0055; }
+.success { color: #b700ff; text-shadow: 0 0 15px #b700ff; margin: 2% 0; }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 5, 16, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: clamp(24px, 5vw, 48px);
+    letter-spacing: 2px;
+}
+
+.overlay p {
+    font-size: clamp(10px, 1.5vw, 16px);
+    color: #94a3b8;
+    margin-top: 2%;
+}
+
+.success {
+    font-size: clamp(18px, 4vw, 36px);
+}
+
+kbd {
+    background: #1e293b;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #fff;
+    border-bottom: 3px solid #0f172a;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.blink {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* MCQ */
+.mcq-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 20, 0.85); /* Dark transparent background */
+    backdrop-filter: blur(5px); /* Premium blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Hide utility */
+.mcq-overlay.hidden {
+    display: none !important;
+}
+
+/* Popup Box */
+.mcq-modal {
+    background: #0f172a;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Question Text */
+#mcq-question {
+    color: #ffea00;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(255, 234, 0, 0.5);
+    font-family: sans-serif;
+}
+
+/* Buttons Container */
+.mcq-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* MCQ Buttons */
+.mcq-btn {
+    background: #1e293b;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.mcq-btn:hover {
+    background: #00ffcc;
+    color: #0f172a;
+    box-shadow: 0 0 15px #00ffcc;
+    transform: scale(1.02); /* Thoda bada hoga hover pe */
+}
+
+.mcq-btn:active {
+    transform: scale(0.98); /* Click karne par chota hoga */
+}
+
+/* MCQ Button Correct & Wrong States */
+.mcq-btn.correct {
+    background: #00ff00 !important;
+    color: #000 !important;
+    border-color: #00ff00 !important;
+    box-shadow: 0 0 20px #00ff00 !important;
+}
+
+.mcq-btn.wrong {
+    background: #ff0055 !important;
+    color: #fff !important;
+    border-color: #ff0055 !important;
+    box-shadow: 0 0 20px #ff0055 !important;
+}
+
+.mcq-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none !important;
+}
+
+.fire-btn {
+    position: absolute; 
+    bottom: 30px; 
+    right: 30px; 
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%; 
+    background: rgba(255, 0, 85, 0.2); 
+    border: 3px solid #ff0055; 
+    color: #ffea00; 
+    font-weight: bold; 
+    font-size: 1.2rem;
+    box-shadow: 0 0 15px #ff0055;
+    cursor: pointer;
+    z-index: 100;
+}
